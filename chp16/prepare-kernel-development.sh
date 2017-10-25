@@ -5,7 +5,7 @@
 #
 
 read -r -p "Do you want to upgrade system? [y/n]" response
-if [ $response == "y" ]; then
+if [ "$response" == "y" ]; then
 	apt update && apt upgrade -y
 	rpi-update
 	reboot
