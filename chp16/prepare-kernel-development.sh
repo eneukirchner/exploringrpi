@@ -21,7 +21,7 @@ make modules_prepare
 wget https://github.com/raspberrypi/firmware/raw/master/extra/Module7.symvers
 cp Module7.symvers Module.symvers
 KHEADER=$(pwd)
-cd /lib/modules/$(uname-r)
+cd /lib/modules/$(uname -r)
 ln -s $KHEADER source
 ln -s $KHEADER build
 ln -s build source
